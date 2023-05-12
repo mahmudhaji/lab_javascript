@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head><title>question1</title></head>
+    <body><h1>Price</h1>
+    <p id = "mrs khan"></p>
+    <script>
+        const Regex =/^\$\d+(?:\.\d{2})?$/;
+        const price1 = "$14.99";
+        const price2 = "$14";
+        const price3 = "$1234567.00"
+        const price4 = "$134213.89money"
+        const price5 = "$.90"
+        const price6 = "$1.1a"
+
+
+        console.log(Regex.test(price1));
+        console.log(Regex.test(price2));
+        console.log(Regex.test(price3));
+        console.log(Regex.test(price4));
+        console.log(Regex.test(price5));
+        console.log(Regex.test(price6));
+        
+
+    </script>
+    </body>
+</html>

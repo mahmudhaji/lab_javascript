@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question</title>
+</head>
+<body>
+    <h1>Regular exprestion</h1>
+    <script>
+    const regex = /<([a-zA-Z]+)(\s+[a-zA-Z]+="[^"]*")*\s*\/>/;
+    console.log(regex.test('<img src="Diamonds.jpg" />')); // true
+    if (regex===true) {
+        console.log('invalid');
+    }
+    else{
+        console.log('valid');
+    }
+    console.log(regex.test('</>')); // false
+    if (regex===false) {
+        console.log('valid');
+    }
+    else{
+        console.log('invalid');
+    }
+    console.log(regex.test('<img />')); // true
+    if (regex==true) {
+        console.log('invalid');
+    }
+    else{
+        console.log('valid');
+    }
+    console.log(regex.test('<img src= />')); // false
+    if (regex==false) {
+       console.log('valid') ;
+    }
+    else{
+        console.log('invalid');
+    }
+    console.log(regex.test('<a href="foo.html" id="stuff" />')); // true
+    if (regex==true) {
+        console.log('invalid')
+    }
+    else{
+        console.log('valid')
+    }
+    const str = '<img src="Diamond.jpg" />';
+    const match = str.match(regex);
+    
+    console.log(match[0]); // "<img src="Diamond.jpg" />"
+    console.log(match[1]); // "img"
+    console.log(match[2]); // " src="Diamond.jpg""
+    
+    </script>
+  
+    
+</body>
+</html>
